@@ -35,6 +35,11 @@ class JumpResult {
 
 
     fun startForResult(intent: Intent, onResult: (requestCode: Int, data: Intent?) -> Unit) {
+        tempFragment!!.startForResult(intent,onResult)
+    }
 
+    fun startForResult(clazz: Class<Any>, onResult: (requestCode: Int, data: Intent?) -> Unit) {
+        val intent = Intent(tempFragment!!.activity,clazz)
+        tempFragment!!.startForResult(intent,onResult)
     }
 }
