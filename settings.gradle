@@ -1,0 +1,3 @@
+include ':jumpresult'
+include ':app'
+rootProject.name = "JumpResult"
